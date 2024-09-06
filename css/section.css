@@ -1,0 +1,144 @@
+:root{
+    --white: #fff;
+    --primery: #201e1f;
+    --secondery: #eef5db;
+    --accent: #ff2e00;
+    --accent-dark: #d42902;
+    --ff: sourcesanspro;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 310px;
+    border-bottom: solid .1em var(--primery);
+}
+.info-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+.info-title-container{
+    margin-bottom: 2em;
+}
+.info-title{
+    color: var(--accent);
+    text-align: center;
+}
+.info-article{
+    margin-bottom: 2em;
+}
+.light-info-article{
+    display: flex;
+    
+}
+.dark-info-article{
+    display: flex;
+    flex-direction: row-reverse;   
+}
+.light-section{
+    background: var(--secondery);
+    color: var(--primery);
+}
+.dark-section{
+    background: var(--primery);
+    color: var(--secondery);
+}
+.info-paragraph-container{
+    width: 70%;
+
+}
+img[alt="info-img"]{
+    max-width: 100%;
+    border-radius: .5em;
+}
+ .info-img-container{
+    width: 30%;
+    min-width: 225px;
+    margin-right: 3em;
+}
+.dark-section-img{
+    margin-left: 3em;
+}
+ /* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primery);
+    color: var(--secondery);
+    padding-top: 1em;
+}
+.main-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-logos-container{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+.social-logos{
+    width: 10%;
+    border-radius: 10%;
+}
+img[alt="social-logo"]{
+    max-width: 100%;
+    background-color: white;
+    border-radius: 100%;
+}
+.footer-nav-list{
+    list-style: none;
+    display: flex;
+}
+.footer-navlink{
+    color: var(--secondery);
+    margin: 0 3em;
+    text-decoration: none;
+}
+.footer-navlink:hover{
+    color: var(--accent);
+}
+.patent-footer{
+    width: 100%;
+    background: black;
+    text-align: center;
+    margin-top: 1em;
+}
+/* 
+###############
+#meadia qureys# 
+###############
+*/
+ @media screen and (max-width: 615px){
+    .info-article{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-paragraph-container, .info-img-container{
+        width: 80%;
+        margin: 0;
+    }
+    .info-img-container{
+        margin-bottom: 2em;
+    }
+    .info-section{
+        padding: 1em 0;
+    }
+    .dark-section-img{
+        margin-left: 0;
+    }
+    .footer-nav-list{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+    .footer-nav-list li{
+        margin: .23em 0;
+    }
+    .social-logos{
+        width: 20%;
+        border-radius: 10%;
+    }
+ }

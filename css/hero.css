@@ -1,0 +1,158 @@
+*{
+    margin: 0; 
+}
+.accent{
+    color: var(--accent);
+}
+
+:root{
+    --white: #fff;
+    --primery: #201e1f;
+    --secondery: #eef5db;
+    --accent: #ff2e00;
+    --accent-dark: #d42902;
+    --ff: sourcesanspro;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 98%;
+    margin: 0 auto;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    margin-left: 3em;
+}
+.navlink{
+    text-decoration: none;
+    color: var(--primery);
+}
+.navlink:hover{
+    color: var(--accent);
+    border-bottom: solid .1em var(--accent) ;
+}
+img[alt="logo"]{
+    max-width: 3em;
+}
+.header-container{
+    padding-top: .55em;
+    /* backdrop-filter: blur(5px); */
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    background: var(--white);
+}
+.hero-section{
+    height: 32em;
+    background-image: url(/images/kate-trysh-Dnkr_lmdKi8-unsplash.jpg);
+    background-size: cover;
+    min-width: 310px;
+    margin-bottom: 0;
+}
+.hero-section::before{
+    position: absolute;
+    width: 100%;
+    height: 32em;
+    background: linear-gradient( to right top, var(--primery), var(--accent));
+    opacity: 30%;
+    z-index: 2;
+    content: "";
+}
+.article-container{
+    position: absolute;
+    width: 35% ;
+    min-width: 306px;
+    margin: 4em;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+    margin-top: 6em;
+}
+.main-heading{
+    font-size: 3rem;
+}
+.accent{
+    color: #ff2e00;
+}
+.main-paragraph{
+    margin-top: 1.25rem;
+}
+.learn-more{
+    margin-top: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+}
+.learn-more:hover{
+    background: var(--accent-dark);
+}
+.learn-more:active{
+    background: var(--accent-dark);
+    box-shadow: 0 2px 2px 2px black;
+}
+.toggle{
+    display: none;
+    margin-right: 1em;
+    font-size: 2rem;
+    color: var(--primery);
+    font-weight: bolder;
+}
+.toggle:hover{
+    color: var(--accent);
+
+}
+.toggle:active{
+    color: var(--accent-dark);
+}
+/* 
+###############
+#meadia qureys# 
+###############
+*/
+@media screen and (max-width: 615px){
+    
+    .toggle{
+        display: flex;  
+    }
+    .navigation{
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 3em;
+        z-index: 6;
+    }
+    .navlist{
+        display: flex;
+        height: 12em;
+        flex-direction: column;
+        background: var(--white);
+        box-shadow:  2px 2px 2px white;
+        border-bottom-left-radius: .35em;
+        border-bottom-right-radius: .35em;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    .navlist li{
+        margin: 0;
+        margin-right: 2.5em;
+    }
+    .dropdown:hover .navigation{
+        display: flex;
+    }
+    .navigation:hover{
+        display: flex;
+    }
+    .hero-section{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
